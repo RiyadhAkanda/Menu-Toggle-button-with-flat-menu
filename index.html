@@ -1,9 +1,35 @@
+<!-- Toggle button -->
 <a href="#menu" id="toggle"><span></span></a>
 
-<div id="menu">
+<!-- Menu to toggle -->
+<div id="menu" style="display: none;">
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
   </ul>
 </div>
+
+<!-- CSS for hamburger icon -->
+<style>
+#toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+#toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+</style>
+
+<!-- JavaScript for toggling -->
+<script>
+document.getElementById('toggle').addEventListener('click', function(e) {
+  e.preventDefault();
+  const menu = document.getElementById('menu');
+  menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+});
+</script>
